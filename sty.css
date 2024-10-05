@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    background: linear-gradient(135deg, #1b073b, #fff, #1b073b);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.kotak {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px 20px;
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    animation: fadeIn 1s ease;
+}
+
+.kotak h1 {
+    color: #6b10fd;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.kotak input {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.kotak input:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.kotak button {
+    width: 50%;
+    padding: 12px;
+    border-radius: 30px;
+    background-color: #6b10fd;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgb(22, 22, 22);
+}
+
+.kotak button:hover {
+    background-color: rgba(0, 80, 200, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 80, 200, 0.6);
+}
+
+.kotak button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 20px rgba(0, 102, 255, 0.5);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .kotak {
+        width: 90%;
+    }
+}
